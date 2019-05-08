@@ -1,9 +1,9 @@
 #!/bin/env python
-'''
+"""
 query_proposals.py
 
 Return details about proposals you belong to, including time allocations.
-'''
+"""
 import requests
 
 API_TOKEN = 'PlaceApiTokenHere'  # API token obtained from https://observe.lco.global/accounts/profile/
