@@ -30,7 +30,7 @@ target = {
 
 # Additional constraints to be added to this configuration
 constraints = {
-    'max_airmass': 2,
+    'max_airmass': 1.6,
     'min_lunar_distance': 30
 }
 

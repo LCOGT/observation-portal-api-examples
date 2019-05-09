@@ -20,7 +20,7 @@ target = {
 
 # Constraints used for scheduling the observation
 constraints = {
-    'max_airmass': 2,
+    'max_airmass': 1.6,
     'min_lunar_distance': 30
 }
 
