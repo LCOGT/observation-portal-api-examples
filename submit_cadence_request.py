@@ -34,16 +34,16 @@ constraints = {
     'min_lunar_distance': 30
 }
 
-# The configurations for the request in the RequestGroup. In this example we
-# are taking 2 exposures with different filters.
+# The configurations for this request. In this example we are taking 2 exposures with
+# different filters and exposure times. The fields acquisition_config and guiding_config 
+# are required fields in a configuration that are ultimately filled in with defaults 
+# if the submitted values are empty.
 configurations = [
     {
         'type': 'EXPOSE',
         'instrument_type': '1M0-SCICAM-SINISTRO',
         'target': target,
         'constraints': constraints,
-        # The fields acquisition_config and guiding_config are required fields that are ultimately
-        # filled in with defaults if the submitted values are empty.
         'acquisition_config': {},
         'guiding_config': {},
         'instrument_configs': [
@@ -53,7 +53,17 @@ configurations = [
                 'optical_elements': {
                     'filter': 'v'
                 }
-            },
+            }
+        ]
+    },
+    {
+        'type': 'EXPOSE',
+        'instrument_type': '1M0-SCICAM-SINISTRO',
+        'target': target,
+        'constraints': constraints,
+        'acquisition_config': {},
+        'guiding_config': {},
+        'instrument_configs': [
             {
                 'exposure_time': 30,
                 'exposure_count': 1,
