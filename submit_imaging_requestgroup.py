@@ -12,7 +12,7 @@ PROPOSAL_ID = 'PlaceProposalHere'  # Proposal IDs may be found here: https://obs
 # The target of the observation
 target = {
     'name': 'm83',
-    'type': 'SIDEREAL',
+    'type': 'ICRS',
     'ra': 204.253,
     'dec': -29.865,
     'epoch': 2000
@@ -77,7 +77,7 @@ location = {
     'telescope_class': '1m0'
 }
 
-# The full userrequest, with additional meta-data
+# The full RequestGroup, with additional meta-data
 requestgroup = {
     'name': 'Example Request 3',  # The title
     'proposal': PROPOSAL_ID,

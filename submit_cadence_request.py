@@ -22,7 +22,7 @@ cadence = {
 # The target of the observation
 target = {
     'name': 'm83',
-    'type': 'SIDEREAL',
+    'type': 'ICRS',
     'ra': 204.253,
     'dec': -29.865,
     'epoch': 2000
