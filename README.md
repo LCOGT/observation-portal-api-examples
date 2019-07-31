@@ -32,3 +32,5 @@ you can obtain your token via API. The [obtain_auth_token.py](obtain_auth_token.
 * [query_ipp.py](query_ipp.py) Query details about Intra Proposal Priority.
 * [query_proposals.py](query_proposals.py) Query proposal details, including time allocations.
 * [obtain_auth_token.py](obtain_auth_token.py) Obtain your API authentication token.
+* [submit_soar_imaging_requestgroup.py](submit_soar_imaging_requestgroup.py) Submit an imaging requestgroup for the SOAR telescope.
+* [submit_soar_spectrograph_requestgroup.py](submit_soar_spectrograph_requestgroup.py) Submit a spectrograph requestgroup for the SOAR telescope.
