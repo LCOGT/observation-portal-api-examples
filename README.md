@@ -26,6 +26,7 @@ you can obtain your token via API. The [obtain_auth_token.py](obtain_auth_token.
 
 * [query_requestgroups.py](query_requestgroups.py) Query the status of your observation requests.
 * [submit_imaging_requestgroup.py](submit_imaging_requestgroup.py) Submit an imaging observation request.
+* [submit_repeat_imaging_requestgroup.py](submit_repeat_imaging_requestgroup.py) Submit an imaging observation request with a repeated set of exposures.
 * [submit_nonsidereal_target.py](submit_nonsidereal_target.py) Submit an imaging observation request for a non-sidereal target.
 * [submit_spectrograph_requestgroup.py](submit_spectrograph_requestgroup.py) Submit a spectrograph observation request.
 * [submit_cadence_request.py](submit_cadence_request.py) Submit observation requests on a cadence.
