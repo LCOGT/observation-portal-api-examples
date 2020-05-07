@@ -11,10 +11,10 @@ PROPOSAL_ID = 'PlaceProposalHere'  # Proposal IDs may be found here: https://obs
 
 # The target of the observation
 target = {
-    'name': 'm83',
+    'name': 'm40',
     'type': 'ICRS',
-    'ra': 204.253,
-    'dec': -29.865,
+    'ra': 185.55221,
+    'dec': 58.08294,
     'epoch': 2000
 }
 
@@ -67,12 +67,12 @@ windows = [{
 
 # The telescope class that should be used for this observation
 location = {
-    'telescope_class': '1m0'
+    'telescope_class': '2m0'
 }
 
 # The full RequestGroup, with additional meta-data
 requestgroup = {
-    'name': 'Example Request 3',  # The title
+    'name': 'Example Request Muscat',  # The title
     'proposal': PROPOSAL_ID,
     'ipp_value': 1.05,
     'operator': 'SINGLE',
