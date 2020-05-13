@@ -41,10 +41,10 @@ configurations = [
                 'exposure_time': 35.0,
                 'exposure_count': 1,
                 'optical_elements': {
-                    'diffuser_g_position': 'ON',
-                    'diffuser_r_position': 'OFF',
-                    'diffuser_i_position': 'OFF',
-                    'diffuser_z_position': 'ON'
+                    'diffuser_g_position': 'on',
+                    'diffuser_r_position': 'off',
+                    'diffuser_i_position': 'off',
+                    'diffuser_z_position': 'on'
                 },
                 'extra_params': {
                     'exposure_mode': 'SYNCHRONOUS',  # SYNCHRONOUS or ASYNCHRONOUS
