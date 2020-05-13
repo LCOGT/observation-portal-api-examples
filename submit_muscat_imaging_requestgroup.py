@@ -27,7 +27,7 @@ constraints = {
 # The configurations for this request. The MUSCAT instrument has extra_params within it's instrument
 # configurations for the g, r, i, z exposure times and the exposing mode. It has optical_elements groups
 # in its instrument configurations for g, r, i, z diffuser states (ON or OFF)
-# For more information on the MUSCAT instrument, look HERE
+# For more information on the MUSCAT instrument, look here: https://lco.global/observatory/instruments/muscat3/
 configurations = [
     {
         'type': 'EXPOSE',
