@@ -3,7 +3,7 @@
 This repository contains python scripts demonstrating how to use the [Observation Portal API](https://observe.lco.global/api/).
 They can be used as a starting point for writing custom scripts to submit/query observation requests programatically.
 
-**All scripts assume the [requests](http://docs.python-requests.org/en/master/) library is installed.**
+**All scripts assume the [requests](https://requests.readthedocs.io/en/master/) library is installed.**
 
 ### Full Documentation
 
