@@ -28,9 +28,9 @@ print('Member of {} proposals'.format(proposals_dict['count']))
 for proposal in proposals_dict['results']:
     print('\nProposal: {}'.format(proposal['id']))
     for time_allocation in proposal['timeallocation_set']:
-        print('{0:.3f} out of {1} standard hours used on instrument type {2} for semester {3}'.format(
+        print('{0:.3f} out of {1} standard hours used on instrument types {2} for semester {3}'.format(
             time_allocation['std_time_used'],
             time_allocation['std_allocation'],
-            time_allocation['instrument_type'],
+            ', '.join(time_allocation['instrument_types']),
             time_allocation['semester'],
         ))
