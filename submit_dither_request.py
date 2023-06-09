@@ -55,6 +55,7 @@ dithered_configuration = configurations[0]
 
 dithered_configuration = requests.post(
     'https://observe.lco.global/api/configurations/dither/',
+    headers={'Authorization': 'Token {}'.format(API_TOKEN)},
     json={
         'pattern': 'line', # accepts line, grid, or spiral
         'num_points': 3, # the number of points in the dither pattern (not required for grid)
