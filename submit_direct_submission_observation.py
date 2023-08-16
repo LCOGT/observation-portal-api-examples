@@ -21,7 +21,7 @@ target = {
     'epoch': 2000
 }
 
-# Constraints used for scheduling the observation
+# Constraints used for scheduling the observation - this is a NOOP / ignored for direct submissions
 constraints = {
     'max_airmass': 1.6,
     'min_lunar_distance': 30
