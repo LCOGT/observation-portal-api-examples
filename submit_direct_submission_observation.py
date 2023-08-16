@@ -1,8 +1,11 @@
 #!/bin/env python
 """
-submit_imaging_requestgroup.py
+submit_direct_submission_observation.py
 
-Submit an imaging RequestGroup to be scheduled for observing.
+Submit an DIRECT submission observation.
+DIRECT submissions are observations that must take place at a fixed time and location,
+and are separate from the scheduler's scheduled observations.
+NOTE: your proposal must allow direct submissions for this to be accepted.
 """
 import requests
 
@@ -32,6 +35,8 @@ configurations = [
     {
         'type': 'EXPOSE',
         'instrument_type': '1M0-SCICAM-SINISTRO',
+        'instrument_name': 'fa14',
+        'guide_camera_name': 'ef02',
         'target': target,
         'constraints': constraints,
         'acquisition_config': {},
@@ -55,37 +60,29 @@ configurations = [
     }
 ]
 
-# The time windows during which this request should be considered for observing. In this example
-# we only provide one. These times are in UTC.
-windows = [{
-    'start': '2019-05-02 00:00:00',
-    'end': '2019-05-30 00:00:00'
-}]
-
-# The telescope class that should be used for this observation
-location = {
-    'telescope_class': '1m0'
-}
-
-# The full RequestGroup, with additional meta-data
-requestgroup = {
-    'name': 'Example Request 3',  # The title
+# The full Observation
+observation = {
+    'name': 'Example Direct Submission',  # The title
+    'site': 'cpt',
+    'enclosure': 'doma',
+    'telescope': '1m0a',
+    'start': '2023-08-20T21:16:22Z',
+    'end': '2023-08-20T21:21:22Z',
     'proposal': PROPOSAL_ID,
-    'ipp_value': 1.05,
+    'priority': 10,
     'operator': 'SINGLE',
-    'observation_type': 'NORMAL',
-    'requests': [{
+    'request': {
         'configurations': configurations,
-        'windows': windows,
-        'location': location,
-    }]
+        'optimization_type': 'TIME',
+        'observation_note': 'This is an example direct submission'
+    }
 }
 
-# Submit the fully formed RequestGroup
+# Submit the fully formed Observation
 response = requests.post(
-    'https://observe.lco.global/api/requestgroups/',
+    'https://observe.lco.global/api/schedule/',
     headers={'Authorization': 'Token {}'.format(API_TOKEN)},
-    json=requestgroup  # Make sure you use json!
+    json=observation  # Make sure you use json!
 )
 
 # Make sure the API call was successful
@@ -95,7 +92,7 @@ except requests.exceptions.HTTPError as exc:
     print('API call failed: {}'.format(response.content))
     raise exc
 
-requestgroup_dict = response.json()  # The API will return the newly submitted requestgroup as json
+observation_dict = response.json()  # The API will return the newly submitted observation as json
 
-# Print out the url on the portal where we can view the submitted request
-print('View the observing request: https://observe.lco.global/requestgroups/{}/'.format(requestgroup_dict['id']))
+# Print out the url on the portal where we can view the submitted observation
+print('View the observing request: https://observe.lco.global/observations/{}/'.format(observation_dict['id']))
