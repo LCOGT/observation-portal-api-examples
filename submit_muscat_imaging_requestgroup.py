@@ -26,7 +26,7 @@ constraints = {
 
 # The configurations for this request. The MUSCAT instrument has extra_params within it's instrument
 # configurations for the g, r, i, z exposure times and the exposing mode. It has optical_elements groups
-# in its instrument configurations for g, r, i, z diffuser states (ON or OFF)
+# in its instrument configurations for g, r, i, z narrowband states (ON or OFF)
 # For more information on the MUSCAT instrument, look here: https://lco.global/observatory/instruments/muscat3/
 configurations = [
     {
@@ -41,10 +41,10 @@ configurations = [
                 'exposure_time': 35.0,
                 'exposure_count': 1,
                 'optical_elements': {
-                    'diffuser_g_position': 'in',
-                    'diffuser_r_position': 'out',
-                    'diffuser_i_position': 'out',
-                    'diffuser_z_position': 'in'
+                    'narrowband_g_position': 'in',
+                    'narrowband_r_position': 'out',
+                    'narrowband_i_position': 'out',
+                    'narrowband_z_position': 'in'
                 },
                 'extra_params': {
                     'exposure_mode': 'SYNCHRONOUS',  # SYNCHRONOUS or ASYNCHRONOUS
